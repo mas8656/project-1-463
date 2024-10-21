@@ -1,0 +1,93 @@
+Overview
+Finding trends and odd variations in stock price data is the goal of this Project. The primary objectives are to:
+
+Determine the era of highest stock price growth.
+Look for any odd variations in pricing over a period of time.
+Write a report based on these discoveries.
+
+Problems addressed
+Every day, stock values fluctuate, so it's critical for investors to understand when prices rise the most. Finding odd price fluctuations that could point to a noteworthy event is also helpful. The project benefits by:
+determining the period of time during which stock values rose the highest.
+recognizing significant fluctuations in stock prices that may not be typical.
+
+
+Specific details: 
+Used Dataset: A list of historical stock prices with dates and prices is the dataset.
+Algorithms Used:
+Sorting: To make sure the analysis is in the correct sequence, we sort the stock data according to the date.
+Max Gain Analysis: This technique determines the ideal time frame during which prices rose the highest.
+Using anomaly detection, one can identify significant price swings over a period of time.
+
+
+Flowchart
+
+           +--------------------------+
+           |  Load Stock Price Data   |
+           +--------------------------+
+                          |
+                          v
+           +--------------------------+
+           |    Sort Data by Date     |
+           +--------------------------+
+                          |
+                          v
+           +--------------------------+
+           | Find Maximum Gain Period |
+           +--------------------------+
+                          |
+                          v
+           +--------------------------+
+           | Detect Unusual Changes   |
+           +--------------------------+
+                          |
+                          v
+           +--------------------------+
+           |   Generate the Report    |
+           +--------------------------+
+
+
+Code OverView
+
+Main.py contains all of the code. This is an overview of the functions of each section:
+
+Load Data: This method reads stock prices straight from a file or list.
+Sorting Function: To ensure that the data is in the correct order, it is sorted by date.
+Max Gain Function: Determines the time frame during which the price rose the highest.
+Anomaly Detection: Identifies significant variations in pricing over time.
+Create Report: Shows the analysis's findings, including the peak gain period and any anomalous price fluctuations.
+
+
+
+How to use the System
+
+Make sure the stock price data is included in the script before using this financial analysis tool. You may also edit the script to include your own data if necessary. When the data is ready, use the command python main.py on your terminal or command prompt to launch the script by running the main.py file. The script will generate and present a report with important insights, including the period with the largest price gain and any odd fluctuations in stock prices found during the analysis, once it has finished running.
+
+
+Example Output:
+
+
+Data from CSV:          Date  Price
+0  2024-01-01    100
+1  2024-01-02    105
+2  2024-01-03    102
+3  2024-01-04    110
+4  2024-01-05    109
+5  2024-01-06    101
+6  2024-01-07     99
+7  2024-01-08    103
+
+Financial Analysis Report:
+Period of Maximum Gain: (0, 3)
+Maximum Gain: 10
+Anomaly Detected: ((1, 105), (0, 100)), ((2, 102), (1, 105)), ((3, 110), (2, 102)), ((5, 101), (4, 109)), ((7, 103), (6, 99))
+Anomaly Distance: 5.0000000000000
+
+Process finished with exit code 0
+
+Verification of the code 
+
+Each component of the code has been verified to perform properly by testing its functionality with sample data. For instance, the sorting and maximum gain algorithms correctly determined the time period with the biggest profit margin while examining a dataset of stock prices. Similar to this, the anomaly detection tool was effective in identifying abrupt and peculiar fluctuations in stock values. Screenshots of the script's output illustrate these features and highlight how the report condenses important findings. These outcomes validate the code's ability to manage common conditions, indicating its dependability for wider application.
+
+Discussion of Results
+
+This project's learning provides important insights regarding stock price changes, like pinpointing instances when prices saw notable increases. Furthermore, the anomaly detection tool aids in identifying abrupt fluctuations in stock prices, which might be helpful for additional research. During the project, processing various data types and improving the algorithms to guarantee accurate anomaly detection were some of the difficulties faced. The system works well with the dataset that is provided, but it may be made even better by supporting more complicated datasets or including more financial measures. All things considered, the project provides a strong basis for financial research and can be enhanced with additional features for more in-depth understanding
